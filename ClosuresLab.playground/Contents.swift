@@ -8,9 +8,9 @@ import UIKit
 //func applyKTimes (_ k: Int) -> () {
 //
 //}
-
-// Uncomment out the following lines to check your solution
-
+//
+//// Uncomment out the following lines to check your solution
+//
 //var myVal = 0
 //applyKTimes(5) {
 //    myVal += 1
@@ -22,18 +22,18 @@ import UIKit
 
 // Write a function called multiples(of:in) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
 
-//func multiples(someInts of: Int) -> Int {
-//    someInts.filter { (a) -> Bool in
-//        return a % 2 == 1
-//    }
-//}
-//
+func multiples(of: Int, numbers: Int) -> [Int] {
+    numbers.filter { (a) -> Bool in
+        return a % 3 == 0
+    }
+}
+
 // Uncomment out the following lines to check your solution
-//
-//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-//let expectedOutputTwo = [3, 6, 9, 3, 12]
-//let outputTwo = multiples(of: 3, in: numbers)
-//assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
+
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+let expectedOutputTwo = [3, 6, 9, 3, 12]
+let outputTwo = multiples(of: 3, in: numbers)
+assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
 // Question Three
@@ -84,23 +84,21 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
-func sortedNamesByLastName(lastname in: [String]) -> [String]{
-    let sortedUsers = firstAndLastTuples.sorted {
-        $0.lastName < $1.lastName
-    }
-}
+//func sortedNamesByLastName(name: [String]) -> (firstname: String, lastname: String){
+//
+//}
 
 // Uncomment out the following lines to check your solution
 
-let firstAndLastTuples = [
-    ("Johann S.", "Bach"),
-    ("Claudio", "Monteverdi"),
-    ("Duke", "Ellington"),
-    ("W. A.", "Mozart"),
-    ("Nicolai","Rimsky-Korsakov"),
-    ("Scott","Joplin"),
-    ("Josquin","Des Prez")
-]
+//let firstAndLastTuples = [
+//    ("Johann S.", "Bach"),
+//    ("Claudio", "Monteverdi"),
+//    ("Duke", "Ellington"),
+//    ("W. A.", "Mozart"),
+//    ("Nicolai","Rimsky-Korsakov"),
+//    ("Scott","Joplin"),
+//    ("Josquin","Des Prez")
+//]
 //let expectedOutputFour = [
 //    ("Johann S.", "Bach"),
 //    ("Josquin","Des Prez"),
@@ -111,15 +109,17 @@ let firstAndLastTuples = [
 //    ("Nicolai","Rimsky-Korsakov")
 //]
 
-let outputFour = sortedNamesByLastName(in: firstAndLastTuples)
-assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
+//let outputFour = sortedNamesByLastName(in: firstAndLastTuples)
+//assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
 
 
 // Question Five
 
 // Write a function called sumOfSquaresOfOddNumbers(in:) that returns the sum of the squares of all the odd numbers from an array of Ints.  Use filter, map and reduce in your function.
 
-// Your function here
+func sumOfSquaresOfOddNumbers(in: [Int]) -> ([Int]) {
+    
+}
 
 // Uncomment out the following lines to check your solution
 
