@@ -5,8 +5,10 @@ import UIKit
 // Write a function named applyKTimes that takes an integer K and a closure and calls the closure K times. The closure will not take any parameters and will not have a return value.
 
 
-func applyKTimes (_ k: Int) -> () {
-    
+func applyKTimes (_ k: Int, closure: ()->()) -> () {
+    for _ in 1...k {
+        closure()
+    }
 }
 
 // Uncomment out the following lines to check your solution
@@ -84,8 +86,8 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
-func sortedNamesByLastName(name in: [String]) -> (firstname: String, lastname: String){
-    
+func sortedNamesByLastName(names in: [String]) -> (s1: String, s2: String){
+    var reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 < s2 } )
 }
 
 // Uncomment out the following lines to check your solution
