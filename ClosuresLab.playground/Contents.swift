@@ -86,8 +86,14 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
-func sortedNamesByLastName(names in: [String]) -> (s1: String, s2: String){
-    var reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 < s2 } )
+func sortedNamesByLastName(in names: [(String, String)]) -> [(String, String)] {
+    let result = names.sorted {names1, names2 in
+        // "<" ascending, a...z
+        // ">" descending, z...a
+        // in "name1.1" the ".1" accesses the second string in the tuple, where as ".0" accesses the first string in the tuple.
+        names1.1 < names2.1
+        }
+    return result
 }
 
 // Uncomment out the following lines to check your solution
